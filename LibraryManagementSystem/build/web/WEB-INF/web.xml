@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+
+
+
+    <!-- LOGIN SERVLET -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlets.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- AddBookServlet -->
+    <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>admin.AddBookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddBookServlet</servlet-name>
+        <url-pattern>/AddBookServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- AdminViewBooks Servlet -->
+    <servlet>
+        <servlet-name>AdminViewBooksServlet</servlet-name>
+        <servlet-class>admin.AdminViewBooksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminViewBooksServlet</servlet-name>
+        <url-pattern>/AdminViewBooksServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- StudentViewBooks Servlet  -->
+    <servlet>
+        <servlet-name>StudentViewBooksServlet</servlet-name>
+        <servlet-class>student.StudentViewBooksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StudentViewBooksServlet</servlet-name>
+        <url-pattern>/StudentViewBooksServlet</url-pattern>
+    </servlet-mapping>
+    <!-- IssueBook Servlet  -->
+    <servlet>
+        <servlet-name>IssueBookServlet</servlet-name>
+        <servlet-class>student.IssueBookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IssueBookServlet</servlet-name>
+        <url-pattern>/IssueBookServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>IssuedBooksServlet</servlet-name>
+        <servlet-class>student.IssuedBooksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IssuedBooksServlet</servlet-name>
+        <url-pattern>/IssuedBooksServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ReturnBookServlet</servlet-name>
+        <servlet-class>student.ReturnBookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReturnBookServlet</servlet-name>
+        <url-pattern>/ReturnBookServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+    <!-- SESSION TIMEOUT -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>
